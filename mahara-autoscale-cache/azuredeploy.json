@@ -144,7 +144,7 @@
             },
             "type": "string"
         },
-         "mahraDbUserAzure": {
+         "maharaDbUserAzure": {
             "defaultValue": "GEN-UNIQUE",
             "metadata": {
                 "description": "Database user password"
