@@ -13,7 +13,7 @@
                 "description": "Resource ID of the controller VM public IP address"
             },
             "type": "string"
-        },
+        }
     },
     "resources": [
         {
@@ -150,7 +150,7 @@
                 "parameters": {
                     "maharaCommon": {
                         "value": "[parameters('maharaCommon')]"
-                    },
+                    }
                 },
                 "templateLink": {
                     "uri": "[concat(parameters('maharaCommon').baseTemplateUrl, 'controllerconfig.json', parameters('maharaCommon').artifactsSasToken)]"

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export MAHARA_RG_NAME=mahara-mysql-03m
+export MAHARA_RG_NAME=mahara-mysql-04m
 export MAHARA_RG_LOCATION=westus
 export MAHARA_DEPLOYMENT_NAME=MainDeployment
 

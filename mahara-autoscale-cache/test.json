@@ -5,6 +5,7 @@
                 "sshPublicKey":                { "value": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAAAfgCYkPviAAQlAqmNlXbMdp84uVaL58OF0QwXHBVDxjWmTO/Fj+7f4Ad62/g/6oorRYGiZdakOdf5ETOawyGS6J5H9saYCHPRFHeTdlnRAvsKOUEEL3q1oBj1EGKa5MHyk0TJrC4l7XDqMT0lKNkCefs4wELdgHfKy+uNNN9YzQ== darrinh@darrinh-P55A-UD3" },
                 "dbServerType":                { "value": "mysql" },
                 "fileServerDiskCount":         { "value": 2 },
-                "fileServerDiskSize":          { "value": 32 }
+                "fileServerDiskSize":          { "value": 32 },
+		"searchType":		       { "value": "elastic" }
 	}        
 }
