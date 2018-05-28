@@ -8,5 +8,5 @@
                 "fileServerDiskSize":          { "value": 32 },
 		"maharaDBPass":		       { "value": "GEN-UNIQUE" },
 		"mahraDbUserAzure:":	       { "value": "GEN-UNIQUE" }
-        
+	}        
 }
