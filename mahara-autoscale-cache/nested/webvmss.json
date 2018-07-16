@@ -201,7 +201,7 @@
             "type": "string"
         },
 	   "lbDNS": {
-            "value": "[reference(variables('extlbID'), '2018-07-01').publicIPAddress[0].properties.fqdn]",
+            "value": "[reference(variables('extlbID'), '2018-07-01').frontendIPConfigurations[3].publicIPAddress[2].dnsSettings[1].properties.fqdn]",
             "type": "string"
 
         }
