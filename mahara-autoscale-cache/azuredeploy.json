@@ -569,7 +569,8 @@
       "maharaDbPassword": {
         "type": "string",
         "value": "[variables('maharaCommon').maharaDbPass]"
-      },
+      }
+    },
     "variables": {
         "documentation01": "This main-template calls multiple sub-templates to create the mahara system",
         "documentation02": "    recoveryservices0   - dummy template (see next statement)",
