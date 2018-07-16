@@ -569,6 +569,10 @@
       "maharaDbPassword": {
         "type": "string",
         "value": "[variables('maharaCommon').maharaDbPass]"
+      },
+      "loadBalancerDNS": {
+        "type": "string",
+        "value": "[variables('maharaCommon').lbDns]"
       }
     },
     "variables": {
@@ -638,6 +642,7 @@
             "ctlrVmName": "[concat('controller-vm-',variables('resourceprefix'))]",
             "ctlrVmSecrets": "[take(variables('ctlrVmSecretsArray'), if(empty(parameters('keyVaultResourceId')), 0, 1))]",
             "lbName": "[concat('lb-',variables('resourceprefix'))]",
+	    "lbDns": "[concat('lb-',variables('resourceprefix'),'.',resourceGroup().location,'.cloudapp.azure.com')]",
             "lbPipName": "[concat('lb-pubip-',variables('resourceprefix'))]",
             "maharaAdminPass": "[concat(toUpper('xl'), substring(uniqueString(resourceGroup().id, deployment().name), 6, 7),',1*8')]",
             "maharaDbName": "mahara",
