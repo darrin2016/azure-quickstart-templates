@@ -199,11 +199,6 @@
         "webvm1IP": {
             "value": "[reference(variables('webvmss1NIC'), '2017-03-30').ipConfigurations[0].properties.privateIPAddress]",
             "type": "string"
-        },
-	"lbDNS": {
-            "value": "[reference(variables('extlbID'), '2017-03-30').frontendIPConfigurations[0].properties.dnsSettings]",
-            "type": "string"
-
-	}
+        }
     }
 }
