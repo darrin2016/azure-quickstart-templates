@@ -570,11 +570,6 @@
         "type": "string",
         "value": "[variables('maharaCommon').maharaDbPass]"
       },
-      "loadBalancerDNS": {
-        "type": "string",
-        "value": "[variables('maharaCommon').lbDns]"
-      }
-    },
     "variables": {
         "documentation01": "This main-template calls multiple sub-templates to create the mahara system",
         "documentation02": "    recoveryservices0   - dummy template (see next statement)",
@@ -642,7 +637,6 @@
             "ctlrVmName": "[concat('controller-vm-',variables('resourceprefix'))]",
             "ctlrVmSecrets": "[take(variables('ctlrVmSecretsArray'), if(empty(parameters('keyVaultResourceId')), 0, 1))]",
             "lbName": "[concat('lb-',variables('resourceprefix'))]",
-            "lbDns": "[reference(resourceId('Microsoft.Network/loadBalancers',variables('lbName')), '2017-03-30').PublicIPAddressPropertiesFormat['dnsSettings']]",
             "lbPipName": "[concat('lb-pubip-',variables('resourceprefix'))]",
             "maharaAdminPass": "[concat(toUpper('xl'), substring(uniqueString(resourceGroup().id, deployment().name), 6, 7),',1*8')]",
             "maharaDbName": "mahara",
