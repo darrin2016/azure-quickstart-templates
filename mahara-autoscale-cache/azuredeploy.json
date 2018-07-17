@@ -676,7 +676,7 @@
             "resourcesPrefix": "[variables('resourceprefix')]",
             "searchType": "[parameters('searchType')]",
             "serverName": "[concat(parameters('dbServerType'), '-',variables('resourceprefix'))]",
-            "siteURL": "[if(or(empty(parameters('siteURL')), equals(parameters('siteURL'), 'www.example.org')), concat('lb-',variables('resourceprefix'),'.',resourceGroup().location), parameters('siteURL'))]",
+            "siteURL": "[if(or(empty(parameters('siteURL')), equals(parameters('siteURL'), 'www.example.org')), reference(concat('Microsoft.Network/publicIPAddresses/', parameters('lbName')),'2016-03-30').dnsSettings.fqdn, parameters('siteURL'))]",
             "sshPublicKey": "[parameters('sshPublicKey')]",
             "sshUsername": "[parameters('sshUsername')]",
             "sslEnforcement": "[parameters('sslEnforcement')]",
