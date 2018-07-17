@@ -71,9 +71,10 @@
         },
 	"siteFQDN": {
 	   "defaultValue": "[reference('networkTemplate').outputs.siteFQDN.value]",
-           "type": "string",
            "metadata": {
 		"description": "FQDN of site."
+           },
+           "type": "string"
         },
         "maharaVersion": {
             "allowedValues": [
