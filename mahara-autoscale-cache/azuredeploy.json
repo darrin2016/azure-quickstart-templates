@@ -69,13 +69,6 @@
             },
             "type": "string"
         },
-	"siteFQDN": {
-	   "defaultValue": "[reference('networkTemplate').outputs.siteFQDN.value]",
-           "metadata": {
-		"description": "FQDN of site."
-           },
-           "type": "string"
-        },
         "maharaVersion": {
             "allowedValues": [
                 "17.10_STABLE",
@@ -550,7 +543,7 @@
     "outputs": {
       "siteURL": {
         "type": "string",
-        "value": "[if(empty(variables('maharaCommon').siteURL,reference('networkTemplate').outputs.siteFQDN.value]"
+        "value": "[if(empty(variables('maharaCommon').siteURL,reference('networkTemplate').outputs.siteFQDN.value])"
       },
       "controllerInstanceIP": {
         "type": "string",
@@ -683,7 +676,7 @@
             "resourcesPrefix": "[variables('resourceprefix')]",
             "searchType": "[parameters('searchType')]",
             "serverName": "[concat(parameters('dbServerType'), '-',variables('resourceprefix'))]",
-            "siteURL": "[if(or(empty(parameters('siteURL')), equals(parameters('siteURL'), 'www.example.org')), parameters('siteFQDN'), parameters('siteURL'))]",
+            "siteURL": "[if(or(empty(parameters('siteURL')), equals(parameters('siteURL'), 'www.example.org')),'', parameters('siteURL'))]",
             "sshPublicKey": "[parameters('sshPublicKey')]",
             "sshUsername": "[parameters('sshUsername')]",
             "sslEnforcement": "[parameters('sslEnforcement')]",
