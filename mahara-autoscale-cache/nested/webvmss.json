@@ -200,8 +200,7 @@
             "type": "string"
         },
         "lbPName": {
-            "value": "[reference(variables('extLbID'), '2017-03-30').frontendIPConfigurations[0].publicIPAddress.dnsSettings.fqdn]",
+            "value": "[reference(variables('pipID'), '2017-04-01').dnsSettings.fqdn]",
 	    "type": "string"
-
-    }
-}
+       }
+   }
