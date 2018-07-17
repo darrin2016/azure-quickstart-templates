@@ -186,8 +186,7 @@
         "dstorID": "[resourceId('Microsoft.Storage/storageAccounts',parameters('maharaCommon').vmssdStorageAccounttName)]",
         "extBeID": "[concat(variables('extLbID'),'/backendAddressPools/',parameters('maharaCommon').extBeName)]",
         "extFeID": "[concat(variables('extLbID'),'/frontendIPConfigurations/',parameters('maharaCommon').extFeName)]",
-        "extLbID": "[resourceId('Microsoft.Network/loadBalancers',parameters('maharaCommon').lbName)]",
-        "extProbeID": "[concat(variables('extLbID'),'/probes/',parameters('maharaCommon').extProbe  )]",
+        "extLbID": "[resourceId('Microsft.Network/loadBalancers',parameters('maharaCommon').lbName)]", "extProbeID": "[concat(variables('extLbID'),'/probes/',parameters('maharaCommon').extProbe  )]",
         "pipID": "[resourceId('Microsoft.Network/publicIPAddresses',parameters('maharaCommon').lbPipName)]",
         "scriptUri": "[concat(parameters('maharaCommon').scriptLocation,parameters('maharaCommon').webServerSetupScriptFilename,parameters('maharaCommon').artifactsSasToken)]",
         "subnetWebRef": "[concat(resourceId('Microsoft.Network/virtualNetworks',parameters('maharaCommon').vnetName),'/subnets/',parameters('maharaCommon').subnetWeb)]",
@@ -199,6 +198,9 @@
         "webvm1IP": {
             "value": "[reference(variables('webvmss1NIC'), '2017-03-30').ipConfigurations[0].properties.privateIPAddress]",
             "type": "string"
-        }
+        },
+        "lbPName": {
+            "value": "[reference(variables('extLbID'), '2017-03-30').frontendIPConfigurations[0].publicIPAddress.dnsSettings.fqdn]",
+
     }
 }
