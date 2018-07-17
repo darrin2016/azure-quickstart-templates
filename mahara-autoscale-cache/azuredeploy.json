@@ -63,7 +63,7 @@
             "type": "string"
         },
         "siteURL": {
-            "defaultValue": "www.example.org",
+            "defaultValue": "",
             "metadata": {
                 "description": "URL for Mahara site"
             },
