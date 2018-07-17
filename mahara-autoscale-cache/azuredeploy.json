@@ -543,7 +543,7 @@
     "outputs": {
       "siteURL": {
         "type": "string",
-        "value": "[if(or(empty(parameters('siteURL')), equals(parameters('siteURL'), 'www.example.org')),reference('networkTemplate').outputs.siteFQDN.value], parameters('siteURL'))]"
+        "value": "[if(or(empty(parameters('siteURL')), equals(parameters('siteURL'), 'www.example.org')),reference('networkTemplate').outputs.siteFQDN.value, parameters('siteURL'))]"
       },
       "controllerInstanceIP": {
         "type": "string",
