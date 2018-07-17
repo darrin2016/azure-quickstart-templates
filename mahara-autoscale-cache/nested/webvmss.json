@@ -198,10 +198,6 @@
         "webvm1IP": {
             "value": "[reference(variables('webvmss1NIC'), '2017-03-30').ipConfigurations[0].properties.privateIPAddress]",
             "type": "string"
-        },
-        "lbPName": {
-            "value": "[reference(variables('pipID'), '2017-04-01').dnsSettings.fqdn]",
-	    "type": "string"
-       }
+        }
    }
 }
