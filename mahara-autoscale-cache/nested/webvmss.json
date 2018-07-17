@@ -201,6 +201,7 @@
         },
         "lbPName": {
             "value": "[reference(variables('extLbID'), '2017-03-30').frontendIPConfigurations[0].publicIPAddress.dnsSettings.fqdn]",
+	    "type": "string"
 
     }
 }
