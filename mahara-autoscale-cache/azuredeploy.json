@@ -549,7 +549,7 @@
     "outputs": {
       "siteURL": {
         "type": "string",
-        "value": "[variables('maharaCommon').siteURL]"
+        "value": "[if(equals(variables('maharaCommon').siteURL,'www.example.org'),reference('networkTemplate').outputs.siteFQDN.value)]"
       },
       "controllerInstanceIP": {
         "type": "string",
@@ -587,7 +587,7 @@
         "type": "string",
         "value": "[variables('maharaCommon').sshUsername]"
       },
-      "loadBalancerDNS": {
+      "loadBalancerDNS/default site URL": {
         "type": "string",
         "value": "[reference('networkTemplate').outputs.siteFQDN.value]"
       }
