@@ -34,7 +34,9 @@ storageAccountKey=${9}
 nfsVmName=${10}
 htmlLocalCopySwitch=${11}
 azFQDN=${12}
-
+echo "==============" >> /tmp/vars.txt
+echo "webserver setup" >> /tmp/vars.txt
+echo "==============" >> /tmp/vars.txt
 echo $glusterNode    >> /tmp/vars.txt
 echo $glusterVolume  >> /tmp/vars.txt
 echo $siteFQDN >> /tmp/vars.txt
