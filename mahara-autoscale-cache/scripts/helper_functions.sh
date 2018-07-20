@@ -175,7 +175,7 @@ function configure_nfs_server_and_export {
 function configure_site_url {
     local SITE_URL=${1}
     local AZ_FQDN=${2}
-    if [ "${SITE_URL}" = "www.example.com" ]; then
+    if [ "${SITE_URL}" = "www.example.org" ]; then
        siteFQDN=${AZ_FQDN}
     fi
 }
